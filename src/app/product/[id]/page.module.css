@@ -1,0 +1,147 @@
+.main {
+    padding: 24px 16px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: 1fr;
+}
+
+
+.imageWrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background: #f6f6f6;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid #e8e8e8;
+}
+
+.image {
+    object-fit: cover;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 0;
+}
+
+.title {
+  margin: 0;
+  font-size: 26px;
+  line-height: 1.2;
+}
+
+.priceRow {
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+}
+
+.normal {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.discounted {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.original {
+    color: #777;
+    text-decoration: line-through;
+    font-size: 14px;
+}
+
+.rating {
+    margin: 0;
+    color: #444;
+}
+
+.desc {
+  margin: 0;
+    color: #222;
+    line-height: 1.6;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    font-size: 12px;
+    border: 1px solid #e8e8e8;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: #fff;
+}
+
+.btn {
+    margin-top: 6px;
+    border: none;
+    background: #111;
+    color: #fff;
+    padding: 12px 14px;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn:hover {
+    opacity: 0.92;
+}
+
+.reviews {
+    margin-top: 10px;
+    border-top: 1px solid #eee;
+    padding-top: 14px;
+}
+
+.h2 {
+    margin: 0 0 10px;
+    font-size: 18px;
+}
+
+.reviewList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 10px;
+}
+
+.reviewItem {
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 12px;
+    background: #fff;
+}
+
+.reviewTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.reviewText {
+    margin: 0;
+    color: #333;
+    line-height: 1.5;
+}
+
+@media (min-width: 900px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+    }
+}
