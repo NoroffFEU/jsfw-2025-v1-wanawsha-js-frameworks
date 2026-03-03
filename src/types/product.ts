@@ -31,3 +31,13 @@ export type ApiItemResponse<T> = {
     data: T;
     meta: unknown;
 };
+
+export type CartItem = {
+    id: string;
+    title: string;
+    price: number;
+    discountedPrice: number;
+    imageUrl: string;
+    imageAlt?: string;
+    quantity: number;
+};
