@@ -1,0 +1,54 @@
+"use client";
+
+import Image from "next/image";
+import { useCart } from "@/store/CartContext";
+
+export default function CartPage() {
+    const { items, total, updateQuantity, removeFromCart } = useCart();
+
+    if (items.length === 0) {
+        return (
+        <main style={{ padding: "24px 16px", maxWidth: 1100, margin: "0 auto" }}>
+            <h1>Cart</h1>
+            <p>Your cart is empty.</p>
+        </main>
+        );
+    }
+
+    return (
+        <main style={{ padding: "24px 16px", maxWidth: 1100, margin: "0 auto" }}>
+        <h1>Cart</h1>
+        <div style={{ display: "grid", gap: 16 }}>
+            {items.map((item) => {
+            const unitPrice = item.discountedPrice < item.price ? item.discountedPrice : item.price;
+
+            return (
+                <div key={item.id} style={{ display: "grid", gridTemplateColumns: "100px 1fr", gap: 14, border: "1px solid #eee", padding: 14, borderRadius: 12 }}>
+                <div style={{ position: "relative", width: 100, height: 100 }}>
+                    <Image src={item.imageUrl} alt={item.imageAlt ?? item.title} fill style={{ objectFit: "cover", borderRadius: 8 }} />
+                </div>
+                <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+                    <strong>{item.title}</strong>
+                    <span>{unitPrice} kr</span>
+                    <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
+                    <button onClick={() => updateQuantity(item.id, item.quantity - 1)}>-</button>
+                    <span>{item.quantity}</span>
+                    <button onClick={() => updateQuantity(item.id, item.quantity + 1)}>+</button>
+                    </div>
+                    <button onClick={() => removeFromCart(item.id)} style={{ color: "red", background: "none", border: "none", cursor: "pointer", padding: 0, textAlign: "left" }}>
+                    Remove
+                    </button>
+                </div>
+                </div>
+            );
+            })}
+        </div>
+        <div style={{ marginTop: 24, borderTop: "1px solid #eee", paddingTop: 16 }}>
+            <h2>Total: {total} kr</h2>
+            <button style={{ marginTop: 10, border: "none", background: "#111", color: "#fff", padding: "12px 16px", borderRadius: 10, fontWeight: 700, cursor: "pointer" }}>
+            Checkout
+            </button>
+            </div>
+        </main>
+    );
+}
