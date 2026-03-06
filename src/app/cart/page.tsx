@@ -2,16 +2,28 @@
 
 import Image from "next/image";
 import { useCart } from "@/store/CartContext";
+import { useRouter } from "next/navigation";
 
 export default function CartPage() {
-    const { items, total, updateQuantity, removeFromCart } = useCart();
-
-    if (items.length === 0) {
+    const router = useRouter();
+    const { items, total, ready, updateQuantity, removeFromCart } = useCart();
+    
+    if (!ready) {
         return (
         <main style={{ padding: "24px 16px", maxWidth: 1100, margin: "0 auto" }}>
             <h1>Cart</h1>
-            <p>Your cart is empty.</p>
+            <p>Loading...</p>
         </main>
+        );
+    }
+
+    if (items.length === 0) {
+        return (
+
+            <main style={{ padding: "24px 16px", maxWidth: 1100, margin: "0 auto" }}>
+                <h1>Cart</h1>
+                <p>Your cart is empty.</p>
+            </main>
         );
     }
 
@@ -45,7 +57,7 @@ export default function CartPage() {
         </div>
         <div style={{ marginTop: 24, borderTop: "1px solid #eee", paddingTop: 16 }}>
             <h2>Total: {total} kr</h2>
-            <button style={{ marginTop: 10, border: "none", background: "#111", color: "#fff", padding: "12px 16px", borderRadius: 10, fontWeight: 700, cursor: "pointer" }}>
+            <button onClick={() => router.push("/checkout/success")} style={{ marginTop: 10, border: "none", background: "#111", color: "#fff", padding: "12px 16px", borderRadius: 10, fontWeight: 700, cursor: "pointer" }}>
             Checkout
             </button>
             </div>
