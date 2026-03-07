@@ -13,11 +13,11 @@ export default function CheckoutSuccessPage() {
 
     return (
         <main style={{ padding: "40px 16px", maxWidth: 800, margin: "0 auto", textAlign: "center" }}>
-        <h1>Thank you for your order!</h1>
-        <p>Your purchase was successful.</p>
-        <Link href="/" style={{ display: "inline-block", marginTop: 20, textDecoration: "none", fontWeight: 700 }}>
-        Back to shop
-        </Link>
-    </main>
+            <h1 style={{ margin: "2rem" }}>Thank you for your order!</h1>
+            <p>Your purchase was successful.</p>
+            <Link href="/" style={{ display: "inline-block", marginTop: 20, textDecoration: "none", fontWeight: 700, color: '#5385c1', fontSize: '2rem' }}>
+            Back to shop
+            </Link>
+         </main>
     );
 }

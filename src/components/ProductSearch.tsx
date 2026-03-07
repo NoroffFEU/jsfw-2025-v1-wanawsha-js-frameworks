@@ -1,21 +1,23 @@
 "use client";
 
-import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 
 export default function ProductSearch() {
 
-    const [query, setQuery] = useState("");
     const router = useRouter();
+    const searchParams = useSearchParams();
+    const [query, setQuery] = useState(searchParams.get("search") || "");
 
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        router.push(`/?search=${encodeURIComponent(query)}`);
-    };
+    useEffect(() => {
+        const timeout = setTimeout(() => {
+        router.replace(`/?search=${encodeURIComponent(query)}`);
+        }, 300);
+
+        return () => clearTimeout(timeout);
+    }, [query, router]);
 
     return (
-        <form onSubmit={handleSubmit}>
         <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Search products..." style={{ width: "100%", padding: "12px", borderRadius: 10, border: "1px solid #ddd", outline: "none" }} />
-        </form>
     );
 }
