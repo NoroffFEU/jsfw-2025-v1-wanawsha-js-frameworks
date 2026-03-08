@@ -1,36 +1,117 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Online Shop - JavaScript Frameworks Course Assignment
 
-## Getting Started
+This project is a fully functional online shop built with **Next.Js, React, and Typecript**.
+The application fetches products from the Noroff API and allows users to browse products, search, viewd details, add items to a shopping cart, and complete a checkout process.
 
-First, run the development server:
+## Live Demo
+https://onlineshop-jsframeworks.netlify.app/
 
+## Repository
+https://github.com/NoroffFEU/jsfw-2025-v1-wanawsha-js-frameworks 
+
+---
+
+# Features
+
+## Product Listing
+Products are fetched from the Noroff API and displayed in a responsive grid layout.
+
+Each product card shows:
+- Product image
+- Product title
+- Price
+- Discounted price (with strike-through on the original price)
+- Rating
+- Discount percentage badge
+
+## Product Details Page
+- Product image
+- Product title
+- Price
+- Discounted price (with strike-through on the original price)
+- Rating
+- Discount percentage badge
+
+Users can add items directly to the cart from this page.
+
+## Dearch Functionality
+Users can search for products using the search bar on the homepage.
+Products are filtered dynamically based on the search query.
+
+## Shopping Cart
+The shopping cart allows users to:
+- Add products
+- Remove products
+- Adjust quantities
+- See the total price
+- View the cart item count in the header
+
+Cart data is stored in **localStorage**, so it persists after page refresh.
+
+## Checkout
+Users can proceed to checkout from the cart page.
+After checkout:
+- The user is redirected to a **Checkout Success page**
+- The cart is cleared
+- A confirmation message is shown
+
+## Toast Notifications
+Notifications appear when
+- A product is added to the cart
+- A product is removed from the cart
+
+## Contact Form
+The contact page includes a validated form with the following rules:
+- Full Name: minimum 3 characters
+- Subject: minimum 3 characters
+- Email: must be valid
+- Message: minimum 10 characters
+
+Error messages are shown if validation fails.
+
+---
+
+# Technologies Used
+- Next.js
+- React
+- TypeScript
+- CSS Modules
+- Noroff Online Shop API
+
+---
+
+## API
+Data is fetched from the Noroff API:
+
+GET /online-shop  
+GET /online-shop/<id>
+
+API documentation:  
+https://docs.noroff.dev/docs/v2/basic/online-shop
+
+---
+
+# Installation
+Clone the repository:
+git clone https://github.com/NoroffFEU/jsfw-2025-v1-wanawsha-js-frameworks
+
+
+Navigate into the project folder:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+cd jsfw-2025-v1-wanawsha-js-frameworks
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Run the development server:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Open the project in the browser:
+```bash
+http://localhost:3000
+```
