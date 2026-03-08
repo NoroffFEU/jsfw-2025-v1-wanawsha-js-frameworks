@@ -13,10 +13,10 @@ export default function ProductSearch() {
         const timeout = setTimeout(() => {
 
             if (query.trim() === "") {
-            router.replace("/");
+                router.replace("/");
             } else {
-            router.replace(`/?search=${encodeURIComponent(query)}`);
-            }
+                router.replace(`/?search=${encodeURIComponent(query)}`);
+                }
             }, 300);
 
             return () => clearTimeout(timeout);

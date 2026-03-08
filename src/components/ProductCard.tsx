@@ -16,16 +16,13 @@ export default function ProductCard({ product }: { product: Product }) {
         </div>
         {hasDiscount && <div className={styles.badge}>-{discountPercent}%</div>}
       </Link>
-
       <div className={styles.body}>
         <Link href={`/product/${product.id}`} className={styles.title}>{product.title}</Link>
-
         <div className={styles.row}>
           <div className={styles.price}>
             {hasDiscount && <span className={styles.original}>{product.price} kr</span>}
             <span className={styles.current}>{unitPrice} kr</span>
           </div>
-
           <div className={styles.rating}>⭐ {product.rating.toFixed(1)}</div>
         </div>
       </div>
