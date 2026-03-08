@@ -118,29 +118,27 @@ http://localhost:3000
 
 # Project Structure
 
-# Project Structure
+        src
+            app
+                cart
+                    contact
+                    checkout
+                        success
+                    product
+                        [id]
+                    loading.tsx
+                    page.tsx
+        
+            components
+                Header
+                ProductCard
+                ProductSearch
+                AddToCartButton
+        
+            store
+                CartContext
+        
+            services
+                api
 
-src
-    app
-         cart
-            contact
-            checkout
-                success
-            product
-                [id]
-            loading.tsx
-            page.tsx
- 
-    components
-        Header
-        ProductCard
-        ProductSearch
-        AddToCartButton
- 
-    store
-        CartContext
- 
-    services
-        api
-
-    types
+            types
