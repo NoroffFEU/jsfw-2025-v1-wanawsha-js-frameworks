@@ -11,11 +11,16 @@ export default function ProductSearch() {
 
     useEffect(() => {
         const timeout = setTimeout(() => {
-        router.replace(`/?search=${encodeURIComponent(query)}`);
-        }, 300);
 
-        return () => clearTimeout(timeout);
-    }, [query, router]);
+            if (query.trim() === "") {
+            router.replace("/");
+            } else {
+            router.replace(`/?search=${encodeURIComponent(query)}`);
+            }
+            }, 300);
+
+            return () => clearTimeout(timeout);
+            }, [query, router]);
 
     return (
         <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Search products..." style={{ width: "100%", padding: "12px", borderRadius: 10, border: "1px solid #ddd", outline: "none" }} />
