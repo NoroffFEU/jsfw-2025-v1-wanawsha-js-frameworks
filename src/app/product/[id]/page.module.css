@@ -1,114 +1,114 @@
 .main {
-    padding: 24px 16px;
-    max-width: 600px;
+    padding: 4rem 2rem;
+    max-width: 1150px;
     margin: 0 auto;
 }
 
 .grid {
     display: grid;
-    gap: 18px;
+    gap: 4rem;
     grid-template-columns: 1fr;
+    align-items: start;
 }
-
 
 .imageWrap {
     position: relative;
     width: 100%;
     aspect-ratio: 4 / 3;
-    background: #f6f6f6;
-    border-radius: 14px;
+    background: #f8f8f8;
+    border-radius: 24px;
     overflow: hidden;
-    border: 1px solid #e8e8e8;
+    border: 1px solid #e5e5e5;
 }
 
 .image {
-    object-fit: cover;
+    object-fit: contain;
+    padding: 2rem;
 }
 
 .content {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 1rem;
     min-width: 0;
 }
 
 .title {
-  margin: 0;
-  font-size: 26px;
-  line-height: 1.2;
+    margin: 0;
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    line-height: 1.1;
 }
 
 .priceRow {
     display: flex;
-    gap: 10px;
+    gap: 1rem;
     align-items: baseline;
 }
 
-.normal {
-    font-size: 18px;
-    font-weight: 800;
-}
-
+.normal,
 .discounted {
-    font-size: 20px;
+    font-size: 1.6rem;
     font-weight: 900;
 }
 
 .original {
     color: #777;
     text-decoration: line-through;
-    font-size: 14px;
+    font-size: 1.1rem;
 }
 
 .rating {
     margin: 0;
     color: #444;
+    font-size: 1.1rem;
 }
 
 .desc {
-  margin: 0;
+    margin: 0;
     color: #222;
-    line-height: 1.6;
+    line-height: 1.7;
+    font-size: 1.15rem;
 }
 
 .tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 0.7rem;
 }
 
 .tag {
-    font-size: 12px;
-    border: 1px solid #e8e8e8;
-    padding: 6px 10px;
+    font-size: 0.9rem;
+    border: 1px solid #e5e5e5;
+    padding: 0.5rem 1rem;
     border-radius: 999px;
     background: #fff;
 }
 
 .btn {
-    margin-top: 6px;
+    margin-top: 1rem;
     border: none;
     background: #111;
     color: #fff;
-    padding: 12px 14px;
-    border-radius: 10px;
-    font-weight: 700;
+    padding: 1rem 1.4rem;
+    border-radius: 14px;
+    font-weight: 800;
     cursor: pointer;
+    font-size: 1rem;
 }
 
 .btn:hover {
-    opacity: 0.92;
+    opacity: 0.9;
 }
 
 .reviews {
-    margin-top: 10px;
-    border-top: 1px solid #eee;
-    padding-top: 14px;
+    margin-top: 2rem;
+    border-top: 1px solid #e5e5e5;
+    padding-top: 2rem;
 }
 
 .h2 {
-    margin: 0 0 10px;
-    font-size: 18px;
+    margin: 0 0 1rem;
+    font-size: 2rem;
 }
 
 .reviewList {
@@ -116,13 +116,13 @@
     padding: 0;
     margin: 0;
     display: grid;
-    gap: 10px;
+    gap: 1rem;
 }
 
 .reviewItem {
-    border: 1px solid #eee;
-    border-radius: 12px;
-    padding: 12px;
+    border: 1px solid #e5e5e5;
+    border-radius: 18px;
+    padding: 1.3rem;
     background: #fff;
 }
 
@@ -130,18 +130,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 8px;
+    margin-bottom: 0.7rem;
 }
 
 .reviewText {
     margin: 0;
     color: #333;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 @media (min-width: 900px) {
     .grid {
         grid-template-columns: 1fr 1fr;
-        align-items: start;
     }
 }
