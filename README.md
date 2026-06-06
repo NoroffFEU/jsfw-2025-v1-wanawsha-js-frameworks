@@ -1,7 +1,7 @@
 # Online Shop - JavaScript Frameworks Course Assignment
 
-This project is a fully functional online shop built with **Next.Js, React, and Typecript**.
-The application fetches products from the Noroff API and allows users to browse products, search, viewd details, add items to a shopping cart, and complete a checkout process.
+This project is a fully functional online shop built with **Next.js, React, and TypeScript**.
+The application fetches products from the Noroff API and allows users to browse products, search, view details, add items to a shopping cart, and complete a checkout process.
 
 ## Live Demo
 https://onlineshop-jsframeworks.netlify.app/
@@ -118,8 +118,9 @@ https://docs.noroff.dev/docs/v2/basic/online-shop
 
 # Installation
 Clone the repository:
+```bash
 git clone https://github.com/NoroffFEU/jsfw-2025-v1-wanawsha-js-frameworks
-
+```
 
 Navigate into the project folder:
 ```bash
