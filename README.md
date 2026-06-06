@@ -9,6 +9,31 @@ https://onlineshop-jsframeworks.netlify.app/
 ## Repository
 https://github.com/NoroffFEU/jsfw-2025-v1-wanawsha-js-frameworks 
 
+## Screenshots
+
+<img width="1328" height="796" alt="Skjermbilde 2026-06-06 kl  21 08 58" src="https://github.com/user-attachments/assets/a8ec76c7-02aa-4bcc-8706-b30b40ce24df" />
+<img width="1358" height="795" alt="Skjermbilde 2026-06-06 kl  21 09 14" src="https://github.com/user-attachments/assets/ba11f452-9a8d-4863-86bd-2b87d9f99d3e" />
+
+---
+
+## Portfolio Improvements
+
+For Portfolio 2, I reviewed the project and made improvements to prepare it for professional presentation.
+
+### Improvements Made
+
+* Improved the product details page layout
+* Increased spacing between product information sections
+* Improved the presentation of product images
+* Refined typography for product titles, prices and descriptions
+* Improved the reviews section layout and readability
+* Improved responsiveness on smaller screens
+* Updated project documentation and README
+
+### Related Commit
+
+https://github.com/NoroffFEU/jsfw-2025-v1-wanawsha-js-frameworks/commit/21a881d51a1a78197c29e8b861faae5b7c786195
+
 ---
 
 # Features
@@ -34,7 +59,7 @@ Each product card shows:
 
 Users can add items directly to the cart from this page.
 
-## Dearch Functionality
+## Search Functionality
 Users can search for products using the search bar on the homepage.
 Products are filtered dynamically based on the search query.
 
@@ -142,3 +167,10 @@ http://localhost:3000
                 api
 
             types
+
+## Author
+
+**Wanawsha Ahmad**
+
+JavaScript Frameworks Course Assignment – Front-End Development at Noroff
+
